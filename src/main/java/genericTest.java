@@ -14,6 +14,10 @@ class Foo{
 
 class Foo2 extends Foo{
 
+    Foo2(){
+
+    }
+
 }
 
 public class genericTest {
@@ -24,10 +28,15 @@ public class genericTest {
         System.out.println(list.getClass() == list2.getClass()); // 类型擦除
 
         // list2.add(new Foo()); 有上界的啥也放不进去，
-        // list2.add(new Foo2()); 子类也别想
+        // list2.add(new Foo2());// 子类也别想
 
         List<Foo> list4 = new ArrayList<>();// 正常做法
         list4.add(new Foo2()); // 正常做法
+
+        List<? super Foo2> list5 = new ArrayList<>(); // 合法
+        // list5.add(new Foo()); // 非法
+        list5.add(new Foo2());  // 放得进去
+        Object res = list5.get(0);  // 会丢失所有的类型信息，只有Object能够承载
 
 
 
