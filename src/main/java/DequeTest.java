@@ -9,6 +9,7 @@ public class DequeTest {
         stack.add(3);
         stack.forEach(System.out::println);
         System.out.println(stack.peek());
+
         stack.pollLast();
         stack.addLast(9);
 
