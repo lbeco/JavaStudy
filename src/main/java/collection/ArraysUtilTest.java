@@ -1,3 +1,5 @@
+package collection;
+
 import java.util.Arrays;
 
 public class ArraysUtilTest {

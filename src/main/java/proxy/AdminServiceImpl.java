@@ -9,4 +9,9 @@ public class AdminServiceImpl implements AdminService{
         System.out.println("查看管理系统数据");
         return new Object();
     }
+
+    public Object find2() {
+        System.out.println("查看管理系统数据");
+        return new Object();
+    }
 }

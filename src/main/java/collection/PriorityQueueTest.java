@@ -1,3 +1,5 @@
+package collection;
+
 import java.util.*;
 
 public class PriorityQueueTest {
@@ -7,6 +9,15 @@ public class PriorityQueueTest {
 
 
         PriorityQueue<Integer> p = new PriorityQueue<>((a,b)->b-a);
+        Comparator<Integer> comp = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1-o2;
+            }
+        };
+
+        PriorityQueue<Integer> p2 = new PriorityQueue<>(comp);
+
         LinkedHashMap linkedHashMap = new LinkedHashMap(10,(float)0.75,true);
 
         p.add(1);

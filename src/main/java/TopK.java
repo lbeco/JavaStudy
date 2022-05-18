@@ -37,6 +37,9 @@ public class TopK {
 
 
     public void push(int n){
+        /*
+            push时，压入数据放在最后，然后和前面的数字进行比较。
+         */
         array[index] = n;
         int cur = index;
         while(array[cur]<array[(cur-1)/2]){
@@ -56,9 +59,10 @@ public class TopK {
         array[0] = array[index-1]; // 获取最后一位数，放在根处
         index--;
         int res = 0;
+        // 同两个子节点进行比较
         while((array[res]>array[res*2+1] && res*2+1 < index )
                 || (array[res]>array[res*2+2] && res*2+2 < index)){
-            if(array[res*2+1]<array[res*2+2]){
+            if(array[res*2+1]<array[res*2+2]){ // 和小的进行置换
                 int temp = array[res];
                 array[res] = array[res*2+1];
                 array[res*2+1] = temp;

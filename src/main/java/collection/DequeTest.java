@@ -1,3 +1,5 @@
+package collection;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
@@ -12,6 +14,7 @@ public class DequeTest {
 
         stack.pollLast();
         stack.addLast(9);
+
 
         stack.forEach(System.out::println);
         System.out.println(stack.stream().count());
