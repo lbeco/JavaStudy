@@ -10,8 +10,7 @@ public class Print01Semaphore {
     public static void main(String[] args) throws InterruptedException{
 
         for(int i=0; i<Print01Semaphore.n; i++){
-            semaphores[i] = new Semaphore(1);
-            semaphores[i].acquire();
+            semaphores[i] = new Semaphore(0);
             new Thread(new R(i)).start();
         }
         semaphores[0].release();

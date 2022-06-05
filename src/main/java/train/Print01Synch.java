@@ -1,7 +1,7 @@
 package train;
 
 public class Print01Synch {
-    private static int order = 0;
+    private static volatile int order = 0;
     private Object obj = new Object();
 
     public static void main(String[] args) {

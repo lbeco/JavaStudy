@@ -1,3 +1,5 @@
+package Multithread;
+
 class NumberPrint implements Runnable{
     private int number;
     public byte res[];
@@ -34,6 +36,6 @@ public class WaitNotifyTest {
         Thread thread2 = new Thread(new NumberPrint((2),a),"2");
         thread2.setPriority(Thread.MIN_PRIORITY);
         thread2.start();
-        //new Thread(new NumberPrint((3),a),"3").start();
+        //new Thread(new Multithread.NumberPrint((3),a),"3").start();
     }
 }

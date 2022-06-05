@@ -62,7 +62,7 @@ public class TopK {
         // 同两个子节点进行比较
         while((array[res]>array[res*2+1] && res*2+1 < index )
                 || (array[res]>array[res*2+2] && res*2+2 < index)){
-            if(array[res*2+1]<array[res*2+2]){ // 和小的进行置换
+            if(array[res*2+1]<array[res*2+2]){ // 和较小的进行置换
                 int temp = array[res];
                 array[res] = array[res*2+1];
                 array[res*2+1] = temp;

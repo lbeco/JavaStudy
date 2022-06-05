@@ -5,13 +5,13 @@ public class BinarySearch {
         l = 0;
         r = nums.length - 1;
 
-        int k = 20;
+        int k = 7;
         while (l < r) {
-            int m = (l + r + 1) / 2;
-            if (k >= nums[m]) {
-                l = m;
+            int m = (l + r) / 2;
+            if (k > nums[m]) {
+                l = m+1;
             } else {
-                r = m - 1;
+                r = m;
             }
         }
         System.out.println(nums[l]);

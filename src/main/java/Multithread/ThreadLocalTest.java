@@ -10,6 +10,11 @@ public class ThreadLocalTest {
         stringLocal.set(Thread.currentThread().getName());
     }
 
+    public void removeThreadLocal(){
+        intLocal.remove();
+        stringLocal.remove();
+    }
+
     public Integer getInt() {
         return intLocal.get();
     }
@@ -25,11 +30,13 @@ public class ThreadLocalTest {
         System.out.println(test.getString());
 
 
+        //这里写了对main没有影响，可见线程独有
         Thread thread1 = new Thread(){
             public void run() {
                 test.set();
                 System.out.println(test.getInt());
                 System.out.println(test.getString());
+                test.removeThreadLocal();
             };
         };
         thread1.start();
