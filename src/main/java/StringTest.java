@@ -18,6 +18,10 @@ public class StringTest {
         List<String> list = new ArrayList<>();
         list.add("123");
         Set<String> set = new HashSet<>();
+        String s1 = new String("123");
+        String s2 = new String("123");
+        String s3 = s1+s2;
+        System.out.println(s3);
 
     }
 }

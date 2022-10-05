@@ -49,7 +49,6 @@ public class Print01Synch {
                         System.out.println("1");
                         order = 0;
                         i++;
-
                     }
                 }
 

@@ -26,6 +26,9 @@ class MyThread extends Thread {
 
 public class ThreadPool {
     public static void main(String[] args) {
+        Executors.newCachedThreadPool();
+        Executors.newScheduledThreadPool(3);
+
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         ExecutorService tp = new ThreadPoolExecutor(5,5,1000, TimeUnit.SECONDS,
                 new LinkedBlockingDeque<>());
